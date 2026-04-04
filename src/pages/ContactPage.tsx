@@ -1,9 +1,6 @@
 import { useState } from 'react'
+import { FORMSPREE_ENDPOINT } from '../config/content'
 import './ContactPage.css'
-
-// TODO: Replace with your own Formspree endpoint ID
-// Sign up at https://formspree.io and create a new form to get your endpoint ID.
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
 
 type InquiryType = 'fan-mail' | 'booking' | 'media'
 
@@ -95,8 +92,6 @@ export function ContactPage() {
 
       if (response.ok) {
         setStatus('success')
-        setFields({ name: '', email: '', inquiryType: '', message: '' })
-        setErrors({})
       } else {
         setStatus('error')
       }
@@ -106,8 +101,9 @@ export function ContactPage() {
   }
 
   function handleReset() {
-    setStatus('idle')
+    setFields({ name: '', email: '', inquiryType: '', message: '' })
     setErrors({})
+    setStatus('idle')
   }
 
   return (
@@ -152,7 +148,7 @@ export function ContactPage() {
                 Name <span aria-hidden="true">*</span>
               </label>
               <input
-                className={`contact-form__input${errors.name ? ' contact-form__input--error' : ''}`}
+                className={`contact-form__input${errors.name ? ' contact-form__control--error' : ''}`}
                 id="contact-name"
                 type="text"
                 name="name"
@@ -178,7 +174,7 @@ export function ContactPage() {
                 Email <span aria-hidden="true">*</span>
               </label>
               <input
-                className={`contact-form__input${errors.email ? ' contact-form__input--error' : ''}`}
+                className={`contact-form__input${errors.email ? ' contact-form__control--error' : ''}`}
                 id="contact-email"
                 type="email"
                 name="email"
@@ -204,7 +200,7 @@ export function ContactPage() {
                 Inquiry Type <span aria-hidden="true">*</span>
               </label>
               <select
-                className={`contact-form__select${errors.inquiryType ? ' contact-form__input--error' : ''}`}
+                className={`contact-form__select${errors.inquiryType ? ' contact-form__control--error' : ''}`}
                 id="contact-inquiry-type"
                 name="inquiryType"
                 value={fields.inquiryType}
@@ -233,7 +229,7 @@ export function ContactPage() {
                 Message <span aria-hidden="true">*</span>
               </label>
               <textarea
-                className={`contact-form__textarea${errors.message ? ' contact-form__input--error' : ''}`}
+                className={`contact-form__textarea${errors.message ? ' contact-form__control--error' : ''}`}
                 id="contact-message"
                 name="message"
                 value={fields.message}

@@ -63,14 +63,14 @@
   min-height: 44px;
 }
 
-.contact-page__reset-btn:hover,
-.contact-page__reset-btn:focus-visible {
+.contact-page__reset-btn:hover {
   background-color: var(--color-accent-blue);
   color: var(--color-bg);
-  outline: none;
 }
 
 .contact-page__reset-btn:focus-visible {
+  background-color: var(--color-accent-blue);
+  color: var(--color-bg);
   outline: 2px solid var(--color-accent-blue);
   outline-offset: 2px;
 }
@@ -151,11 +151,11 @@
 }
 
 /* Error state */
-.contact-form__input--error {
+.contact-form__control--error {
   border-color: var(--color-accent-red);
 }
 
-.contact-form__input--error:focus {
+.contact-form__control--error:focus {
   border-color: var(--color-accent-red);
   box-shadow: 0 0 0 2px rgba(232, 32, 10, 0.2);
 }
