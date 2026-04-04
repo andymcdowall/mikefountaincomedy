@@ -1,0 +1,176 @@
+/* TourPage — mobile-first styles */
+
+.tour-page {
+  min-height: calc(100vh - var(--header-height));
+  padding: var(--space-12) var(--space-4);
+}
+
+.tour-page__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.tour-page__heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-8);
+}
+
+.tour-page__empty {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+/* Show list */
+.tour-page__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Show card — stacked on mobile */
+.show-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-6);
+  transition: border-color var(--transition-fast);
+}
+
+.show-card:hover {
+  border-color: var(--color-accent-red);
+}
+
+/* Date block */
+.show-card__date {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.show-card__date-weekday {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.show-card__date-month {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--color-accent-red);
+  letter-spacing: 0.05em;
+}
+
+.show-card__date-day {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-text-primary);
+}
+
+.show-card__date-year {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Venue / location */
+.show-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.show-card__venue {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.show-card__location {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Action area */
+.show-card__action {
+  margin-top: var(--space-2);
+}
+
+.show-card__ticket-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-accent-red);
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  letter-spacing: 0.08em;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.show-card__ticket-btn:hover,
+.show-card__ticket-btn:focus-visible {
+  background-color: var(--color-accent-red-hover);
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
+
+.show-card__sold-out {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  letter-spacing: 0.08em;
+  border-radius: var(--border-radius);
+  cursor: default;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Desktop layout — table-row style at ≥768px */
+@media (min-width: 768px) {
+  .tour-page__heading {
+    font-size: var(--text-6xl);
+  }
+
+  .show-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: var(--space-8);
+  }
+
+  .show-card__date {
+    flex: 0 0 160px;
+    flex-wrap: nowrap;
+  }
+
+  .show-card__info {
+    flex: 1;
+  }
+
+  .show-card__action {
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+}
