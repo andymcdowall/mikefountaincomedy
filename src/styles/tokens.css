@@ -1,0 +1,46 @@
+/* Design tokens for Mike Fountain Comedy */
+:root {
+  /* Colors */
+  --color-bg: #0a0a0a;
+  --color-bg-surface: #141414;
+  --color-accent-red: #e8200a;
+  --color-accent-red-hover: #ff2d14;
+  --color-accent-blue: #00b4ff;
+  --color-text-primary: #f5f0e8;
+  --color-text-muted: #888888;
+  --color-border: #2a2a2a;
+
+  /* Typography */
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-4xl: 2.25rem;
+  --text-6xl: 3.75rem;
+  --text-8xl: 6rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --max-width: 1100px;
+  --header-height: 64px;
+  --border-radius: 4px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}
