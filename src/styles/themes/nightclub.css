@@ -1,0 +1,18 @@
+/* Nightclub theme — placeholder values; actual values applied in ticket 01 */
+[data-theme="nightclub"] {
+  --color-bg: #placeholder;
+  --color-bg-surface: #placeholder;
+  --color-text-primary: #placeholder;
+  --color-text-muted: #placeholder;
+  --color-accent: #placeholder;
+  --color-accent-hover: #placeholder;
+  --color-accent-secondary: #placeholder;
+  --color-border: #placeholder;
+  --color-accent-red: #placeholder;
+  --color-accent-red-hover: #placeholder;
+  --color-accent-blue: #placeholder;
+  --color-accent-glow: transparent;
+  --font-heading: sans-serif;
+  --font-body: sans-serif;
+  --border-radius: 4px;
+}
