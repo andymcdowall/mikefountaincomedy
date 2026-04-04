@@ -6,6 +6,8 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 
 **Design language:** Near-black background, electric red accent (#E8200A), neon blue secondary (#00B4FF), cream text (#F5F0E8). Bebas Neue for headings, Inter for body. Subtle grain texture, high-contrast graphic feel inspired by Mike's promo materials.
 
+**Mobile-first:** All components are designed for mobile viewports first, with styles progressively enhanced for tablet (≥768px) and desktop (≥1100px) via `min-width` media queries. Touch targets ≥44px, tap-friendly buttons, no hover-only interactions.
+
 ## Tickets
 
 ### Ticket 01 — Project scaffold, routing, design system, Header/Footer
@@ -17,8 +19,8 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 - Vite + React + TypeScript project init (`npm create vite`)
 - React Router v6 with routes: `/`, `/tour`, `/videos`, `/contact`
 - Google Fonts: Bebas Neue (headings) + Inter (body)
-- CSS custom properties design tokens: colors, spacing, typography scale
-- Global CSS reset and base styles
+- CSS custom properties design tokens: colors, spacing, typography scale, breakpoints (`--bp-md: 768px`, `--bp-lg: 1100px`)
+- Global CSS reset and base styles written mobile-first (`min-width` media queries only)
 - `Header` component: sticky nav with links and mobile hamburger menu
 - `Footer` component: copyright + social link placeholders
 
@@ -27,6 +29,7 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 - All four routes render without crashing
 - Header is sticky; hamburger opens/closes nav on mobile (≤768px)
 - Design tokens defined as CSS custom properties in `src/styles/tokens.css`
+- All media queries use `min-width` (mobile-first); no `max-width` queries
 
 ---
 
@@ -41,9 +44,10 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 - `BioPage` (route `/`) below hero: headshot placeholder + 2–3 paragraph bio text blocks
 
 **Acceptance criteria:**
-- Hero heading renders in Bebas Neue at ≥72px desktop, scales on mobile
-- CTA button uses electric red accent and links to Tour page
+- Hero heading renders in Bebas Neue, starts at 48px on mobile, scales up to ≥72px on desktop
+- CTA button uses electric red accent, links to Tour page, and has a ≥44px touch target
 - Bio section is readable with appropriate whitespace on mobile and desktop
+- Layout is single-column on mobile; optional two-column (photo + text) on desktop
 
 ---
 
@@ -63,6 +67,7 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 - "Get Tickets" opens `ticketUrl` in a new tab
 - Sold-out shows display a "Sold Out" badge instead of a button
 - Empty state message when no shows are listed
+- On mobile, each show is a stacked card (not a table row); table layout only on desktop
 
 ---
 
@@ -79,7 +84,7 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 
 **Acceptance criteria:**
 - Adding a YouTube ID to `videos.ts` automatically renders it on the page
-- Grid is 2-column on desktop, 1-column on mobile
+- Grid is 1-column on mobile, 2-column on desktop
 - iframes are responsive and maintain 16:9 aspect ratio
 - Videos load lazily (`loading="lazy"` on iframes)
 
@@ -102,3 +107,4 @@ A single-page React application for comedian Mike Fountain. Includes a hero/bio 
 - Successful submission shows a confirmation message
 - Formspree endpoint is a clearly marked `TODO` constant in the component
 - Form is accessible: labels associated with inputs, keyboard navigable
+- All inputs are full-width on mobile with ≥44px touch targets; comfortable padding on small screens

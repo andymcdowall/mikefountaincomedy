@@ -35,6 +35,10 @@
   --space-16: 4rem;
   --space-24: 6rem;
 
+  /* Breakpoints (use in min-width queries — mobile first) */
+  --bp-md: 768px;
+  --bp-lg: 1100px;
+
   /* Layout */
   --max-width: 1100px;
   --header-height: 64px;
