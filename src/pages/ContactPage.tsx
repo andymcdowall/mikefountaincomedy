@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { FORMSPREE_ENDPOINT } from '../config/content'
+import { content } from '../config/content'
+
+const FORMSPREE_ENDPOINT = content.contact.formspreeEndpoint
 import './ContactPage.css'
 
 type InquiryType = 'fan-mail' | 'booking' | 'media'

@@ -1,0 +1,102 @@
+/* Bio section — mobile-first */
+.bio {
+  padding: var(--space-16) var(--space-4);
+  background-color: var(--color-bg-surface);
+}
+
+.bio__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+/* Headshot placeholder */
+.bio__photo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bio__photo-placeholder {
+  width: 240px;
+  height: 300px;
+  background-color: var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--color-text-muted);
+}
+
+.bio__photo-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Bio text */
+.bio__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.bio__heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  letter-spacing: 0.04em;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.bio__para {
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  line-height: 1.75;
+}
+
+.bio__link {
+  color: var(--color-accent-red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.bio__link:hover,
+.bio__link:focus-visible {
+  color: var(--color-accent-red-hover);
+}
+
+/* Desktop: two-column layout (photo left, text right) */
+@media (min-width: 1100px) {
+  .bio__inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-16);
+  }
+
+  .bio__photo-wrap {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .bio__photo-placeholder {
+    width: 280px;
+    height: 360px;
+  }
+
+  .bio__text {
+    flex: 1;
+  }
+
+  .bio__heading {
+    font-size: var(--text-6xl);
+  }
+
+  .bio__para {
+    font-size: var(--text-lg);
+  }
+}

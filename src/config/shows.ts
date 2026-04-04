@@ -8,20 +8,20 @@ export interface Show {
 }
 
 export const shows: Show[] = [
-  // TODO: Add real show dates
+  // TODO: Replace with real show dates and ticket links
   {
     date: "2025-06-14",
     venue: "The Featherbone Factory",
     city: "Three Oaks",
     state: "MI",
-    ticketUrl: "https://example.com/tickets",
+    ticketUrl: "https://example.com/tickets/featherbone",
   },
   {
     date: "2025-07-04",
     venue: "Laughs Comedy Club",
     city: "Chicago",
     state: "IL",
-    ticketUrl: "https://example.com/tickets",
+    ticketUrl: "https://example.com/tickets/laughs",
     soldOut: true,
   },
   {
@@ -29,6 +29,21 @@ export const shows: Show[] = [
     venue: "The Punchline",
     city: "San Francisco",
     state: "CA",
-    ticketUrl: "https://example.com/tickets",
+    ticketUrl: "https://example.com/tickets/punchline",
+  },
+  {
+    date: "2025-09-13",
+    venue: "Comedy Bar",
+    city: "Toronto",
+    state: "ON",
+    ticketUrl: "https://example.com/tickets/comedybar",
+  },
+  {
+    date: "2025-10-31",
+    venue: "Stand Up NY",
+    city: "New York",
+    state: "NY",
+    ticketUrl: "https://example.com/tickets/standupny",
+    soldOut: true,
   },
 ];
