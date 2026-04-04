@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 export type Theme = 'navy-orange' | 'nightclub'
 
+const THEMES: Theme[] = ['navy-orange', 'nightclub']
 const STORAGE_KEY = 'mfc-theme'
 const DEFAULT_THEME: Theme = 'nightclub'
 
@@ -15,8 +16,8 @@ const ThemeContext = createContext<ThemeContextValue | null>(null)
 function readStoredTheme(): Theme {
   try {
     const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored === 'navy-orange' || stored === 'nightclub') {
-      return stored
+    if (stored && (THEMES as string[]).includes(stored)) {
+      return stored as Theme
     }
   } catch {
     // localStorage unavailable — fall through to default
