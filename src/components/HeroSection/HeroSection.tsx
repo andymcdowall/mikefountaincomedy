@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom'
+import { content } from '../../config/content'
 import './HeroSection.css'
 
 export function HeroSection() {
   return (
     <section className="hero grain" aria-label="Hero">
       <div className="hero__inner">
-        <h1 className="hero__heading">Mike Fountain</h1>
-        <p className="hero__tagline">Stand-up Comedy. No apologies.</p>
-        <Link to="/tour" className="hero__cta" aria-label="See tour dates">
-          See Tour Dates
+        <h1 className="hero__heading">{content.artist.name}</h1>
+        <p className="hero__tagline">{content.artist.tagline}</p>
+        <Link to={content.hero.ctaHref} className="hero__cta" aria-label={content.hero.ctaAriaLabel}>
+          {content.hero.ctaText}
         </Link>
       </div>
     </section>
