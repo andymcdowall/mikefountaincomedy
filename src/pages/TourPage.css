@@ -37,6 +37,8 @@
 .show-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--space-3);
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
@@ -141,6 +143,7 @@
   letter-spacing: 0.08em;
   border-radius: var(--border-radius);
   cursor: default;
+  pointer-events: none;
   white-space: nowrap;
 }
 
@@ -153,6 +156,7 @@
   .show-card {
     flex-direction: row;
     align-items: center;
+    text-align: left;
     gap: var(--space-8);
   }
 

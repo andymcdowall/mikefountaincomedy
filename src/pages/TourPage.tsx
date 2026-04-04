@@ -29,12 +29,12 @@ export function TourPage() {
               const { weekday, month, day, year } = formatDate(show.date)
               return (
                 <li key={`${show.date}-${show.venue}`} className="show-card">
-                  <div className="show-card__date">
+                  <time dateTime={show.date} className="show-card__date">
                     <span className="show-card__date-weekday">{weekday}</span>
                     <span className="show-card__date-month">{month}</span>
                     <span className="show-card__date-day">{day}</span>
                     <span className="show-card__date-year">{year}</span>
-                  </div>
+                  </time>
 
                   <div className="show-card__info">
                     <span className="show-card__venue">{show.venue}</span>
@@ -45,10 +45,8 @@ export function TourPage() {
 
                   <div className="show-card__action">
                     {show.soldOut ? (
-                      <span className="show-card__sold-out" aria-label="Sold out">
-                        Sold Out
-                      </span>
-                    ) : (
+                      <span className="show-card__sold-out">Sold Out</span>
+                    ) : show.ticketUrl ? (
                       <a
                         href={show.ticketUrl}
                         target="_blank"
@@ -57,7 +55,7 @@ export function TourPage() {
                       >
                         Get Tickets
                       </a>
-                    )}
+                    ) : null}
                   </div>
                 </li>
               )
