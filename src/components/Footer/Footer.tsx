@@ -30,7 +30,7 @@ export function Footer() {
         </ul>
 
         <p className="site-footer__copy">
-          &copy; {CURRENT_YEAR} Mike Fountain. All rights reserved.
+          &copy; {CURRENT_YEAR} Minerva Studios. All rights reserved.
         </p>
       </div>
     </footer>
