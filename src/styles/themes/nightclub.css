@@ -28,12 +28,21 @@
   border-bottom-color: rgba(0, 229, 255, 0.12);
 }
 
-/* Radial orange glow behind the hero heading */
+/* Brick texture + dark overlay on the hero */
+[data-theme="nightclub"] .hero {
+  background-image: url('/brick.png');
+  background-size: cover;
+  background-position: center;
+}
+
 [data-theme="nightclub"] .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(255, 107, 0, 0.08) 0%, transparent 70%);
+  /* Dark tint to knock back the brick, then the orange glow on top */
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 40%, rgba(255, 107, 0, 0.10) 0%, transparent 70%),
+    rgba(8, 8, 16, 0.72);
   pointer-events: none;
   z-index: 0;
 }
