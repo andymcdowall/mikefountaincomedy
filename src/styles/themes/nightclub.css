@@ -58,6 +58,12 @@
     0 0 72px rgba(255, 107, 0, 0.35);
 }
 
+/* Kill the box-shadow glow on active nav link — it renders as a rectangle */
+[data-theme="nightclub"] .site-header__nav-link--active,
+[data-theme="nightclub"] .site-header__nav-link:hover {
+  box-shadow: none;
+}
+
 /* Logo — neon tube treatment matching the hero heading */
 [data-theme="nightclub"] .site-header__logo {
   -webkit-text-fill-color: transparent;
