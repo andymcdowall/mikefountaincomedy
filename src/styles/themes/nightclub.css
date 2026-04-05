@@ -72,3 +72,18 @@
   box-shadow: 0 0 28px var(--color-accent-glow), inset 0 0 16px rgba(255, 107, 0, 0.1);
   outline: none;
 }
+
+/* Get Tickets button — hollow neon outline matching the hero CTA */
+[data-theme="nightclub"] .show-card__ticket-btn {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 12px var(--color-accent-glow), inset 0 0 12px rgba(255, 107, 0, 0.05);
+}
+
+[data-theme="nightclub"] .show-card__ticket-btn:hover,
+[data-theme="nightclub"] .show-card__ticket-btn:focus-visible {
+  background: rgba(255, 107, 0, 0.08);
+  box-shadow: 0 0 28px var(--color-accent-glow), inset 0 0 16px rgba(255, 107, 0, 0.1);
+  outline: none;
+}
