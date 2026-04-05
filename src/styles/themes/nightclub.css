@@ -20,12 +20,20 @@
 
 /* ── Nightclub structural personality ───────────────────────────────── */
 
-/* Frosted-glass header — scrolls over content with blur */
+/* Frosted-glass header — blur on ::before so backdrop-filter doesn't
+   create a containing block that traps the fixed mobile nav overlay */
 [data-theme="nightclub"] .site-header {
+  border-bottom-color: rgba(255, 107, 0, 0.12);
+}
+
+[data-theme="nightclub"] .site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(8, 8, 16, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: rgba(255, 107, 0, 0.12);
+  z-index: -1;
 }
 
 /* Brick texture + dark overlay on the hero */
