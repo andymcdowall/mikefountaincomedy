@@ -1,4 +1,4 @@
-/* Nightclub theme — deep black, electric cyan + hot-pink neon */
+/* Nightclub theme — deep black, neon orange */
 [data-theme="nightclub"] {
   --color-bg: #080810;
   --color-bg-surface: #0E0E1A;
@@ -6,12 +6,12 @@
   --color-text-muted: #8888AA;
   --color-accent: #FF6B00;
   --color-accent-hover: #FF8C00;
-  --color-accent-secondary: #00E5FF;
+  --color-accent-secondary: #FF6B00;
   --color-border: #1A1A3A;
   /* Map legacy token names used by existing components */
   --color-accent-red: #FF6B00;
   --color-accent-red-hover: #FF8C00;
-  --color-accent-blue: #00E5FF;
+  --color-accent-blue: #FF6B00;
   --color-accent-glow: rgba(255, 107, 0, 0.45);
   --font-heading: 'Comfortaa', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -25,7 +25,7 @@
   background: rgba(8, 8, 16, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: rgba(0, 229, 255, 0.12);
+  border-bottom-color: rgba(255, 107, 0, 0.12);
 }
 
 /* Brick texture + dark overlay on the hero */
