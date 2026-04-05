@@ -48,7 +48,7 @@
 }
 
 .show-card:hover {
-  border-color: var(--color-accent-red);
+  border-color: var(--color-accent);
 }
 
 /* Date block */
@@ -68,7 +68,7 @@
 .show-card__date-month {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
-  color: var(--color-accent-red);
+  color: var(--color-accent);
   letter-spacing: 0.05em;
 }
 
@@ -112,7 +112,7 @@
   justify-content: center;
   min-height: 44px;
   padding: var(--space-3) var(--space-6);
-  background-color: var(--color-accent-red);
+  background-color: var(--color-accent);
   color: var(--color-text-primary);
   font-family: var(--font-heading);
   font-size: var(--text-lg);
@@ -125,8 +125,8 @@
 
 .show-card__ticket-btn:hover,
 .show-card__ticket-btn:focus-visible {
-  background-color: var(--color-accent-red-hover);
-  outline: 2px solid var(--color-accent-blue);
+  background-color: var(--color-accent-hover);
+  outline: 2px solid var(--color-accent-secondary);
   outline-offset: 2px;
 }
 

@@ -59,7 +59,7 @@
 }
 
 .bio__link {
-  color: var(--color-accent-red);
+  color: var(--color-accent);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color var(--transition-fast);
@@ -67,7 +67,7 @@
 
 .bio__link:hover,
 .bio__link:focus-visible {
-  color: var(--color-accent-red-hover);
+  color: var(--color-accent-hover);
 }
 
 /* Desktop: two-column layout (photo left, text right) */

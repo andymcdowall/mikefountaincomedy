@@ -1,18 +1,20 @@
-/* Navy & Orange theme — placeholder values; actual values applied in ticket 01 */
 [data-theme="navy-orange"] {
-  --color-bg: #placeholder;
-  --color-bg-surface: #placeholder;
-  --color-text-primary: #placeholder;
-  --color-text-muted: #placeholder;
-  --color-accent: #placeholder;
-  --color-accent-hover: #placeholder;
-  --color-accent-secondary: #placeholder;
-  --color-border: #placeholder;
-  --color-accent-red: #placeholder;
-  --color-accent-red-hover: #placeholder;
-  --color-accent-blue: #placeholder;
+  --color-bg: #FFF9F4;
+  --color-bg-surface: #F2E9DE;
+  --color-text-primary: #1A1A2E;
+  --color-text-muted: #666666;
+  --color-accent: #E8621A;
+  --color-accent-hover: #C9521A;
+  --color-accent-secondary: #002F6D;
+  --color-border: #DDD5C8;
   --color-accent-glow: transparent;
-  --font-heading: sans-serif;
-  --font-body: sans-serif;
-  --border-radius: 4px;
+
+  /* Legacy aliases — kept so existing component CSS continues to work */
+  --color-accent-red: #E8621A;
+  --color-accent-red-hover: #C9521A;
+  --color-accent-blue: #002F6D;
+
+  --font-heading: 'Big Shoulders Display', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --border-radius: 8px;
 }

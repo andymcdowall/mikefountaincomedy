@@ -28,7 +28,7 @@
 }
 
 .site-header__logo:hover {
-  color: var(--color-accent-red);
+  color: var(--color-accent);
 }
 
 /* Hamburger button — visible only on mobile */
@@ -60,7 +60,7 @@
 }
 
 .site-header__hamburger:hover .site-header__hamburger-bar {
-  background-color: var(--color-accent-red);
+  background-color: var(--color-accent);
 }
 
 /* Nav — hidden on mobile by default, shown as overlay when open */
@@ -102,7 +102,7 @@
 
 .site-header__nav-link:hover,
 .site-header__nav-link--active {
-  color: var(--color-accent-red);
+  color: var(--color-accent);
 }
 
 /* Desktop nav — hide hamburger, show inline nav */
