@@ -58,6 +58,25 @@
     0 0 72px rgba(255, 107, 0, 0.35);
 }
 
+/* Nav links — neon tube treatment, 1px stroke for smaller sizes */
+[data-theme="nightclub"] .site-header__nav-link {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--color-text-primary);
+  text-shadow:
+    0 0 4px rgba(240, 238, 255, 0.4),
+    0 0 12px rgba(240, 238, 255, 0.15);
+}
+
+[data-theme="nightclub"] .site-header__nav-link:hover,
+[data-theme="nightclub"] .site-header__nav-link--active {
+  -webkit-text-stroke: 1px var(--color-accent);
+  text-shadow:
+    0 0 6px var(--color-accent),
+    0 0 16px rgba(255, 107, 0, 0.6),
+    0 0 32px rgba(255, 107, 0, 0.3);
+  box-shadow: none;
+}
+
 /* Neon-outline CTA — transparent fill, glowing border */
 [data-theme="nightclub"] .hero__cta {
   background: transparent;
