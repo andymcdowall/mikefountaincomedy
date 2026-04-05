@@ -51,7 +51,7 @@
   justify-content: center;
   min-height: 44px;
   padding: var(--space-3) var(--space-8);
-  background-color: var(--color-accent-red);
+  background-color: var(--color-accent);
   color: var(--color-text-primary);
   font-family: var(--font-heading);
   font-size: var(--text-xl);
@@ -63,8 +63,8 @@
 
 .hero__cta:hover,
 .hero__cta:focus-visible {
-  background-color: var(--color-accent-red-hover);
-  outline: 2px solid var(--color-accent-red-hover);
+  background-color: var(--color-accent-hover);
+  outline: 2px solid var(--color-accent-hover);
   outline-offset: 2px;
 }
 

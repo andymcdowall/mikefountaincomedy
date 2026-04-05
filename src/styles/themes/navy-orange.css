@@ -1,18 +1,60 @@
-/* Navy & Orange theme — placeholder values; actual values applied in ticket 01 */
 [data-theme="navy-orange"] {
-  --color-bg: #placeholder;
-  --color-bg-surface: #placeholder;
-  --color-text-primary: #placeholder;
-  --color-text-muted: #placeholder;
-  --color-accent: #placeholder;
-  --color-accent-hover: #placeholder;
-  --color-accent-secondary: #placeholder;
-  --color-border: #placeholder;
-  --color-accent-red: #placeholder;
-  --color-accent-red-hover: #placeholder;
-  --color-accent-blue: #placeholder;
+  --color-bg: #FFF9F4;
+  --color-bg-surface: #F2E9DE;
+  --color-text-primary: #1A1A2E;
+  --color-text-muted: #666666;
+  --color-accent: #E8621A;
+  --color-accent-hover: #C9521A;
+  --color-accent-secondary: #002F6D;
+  --color-border: #DDD5C8;
   --color-accent-glow: transparent;
-  --font-heading: sans-serif;
-  --font-body: sans-serif;
-  --border-radius: 4px;
+
+  /* Legacy aliases — kept so existing component CSS continues to work */
+  --color-accent-red: #E8621A;
+  --color-accent-red-hover: #C9521A;
+  --color-accent-blue: #002F6D;
+
+  --font-heading: 'Big Shoulders Display', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --border-radius: 8px;
+}
+
+/* ── Navy-orange structural personality ─────────────────────────────── */
+
+/* Clean white header with a soft shadow instead of a hard border */
+[data-theme="navy-orange"] .site-header {
+  background: #ffffff;
+  border-bottom: none;
+  box-shadow: 0 1px 0 #DDD5C8, 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Warm gradient hero — shifts from cream at top to warm tan at bottom */
+[data-theme="navy-orange"] .hero {
+  background: linear-gradient(160deg, #FFF9F4 0%, #FAE3CB 100%);
+}
+
+/* Pill-shaped CTA with shadow — white text on orange reads better */
+[data-theme="navy-orange"] .hero__cta {
+  border-radius: 999px;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(232, 98, 26, 0.3);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+[data-theme="navy-orange"] .hero__cta:hover,
+[data-theme="navy-orange"] .hero__cta:focus-visible {
+  box-shadow: 0 6px 24px rgba(232, 98, 26, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Cards and surfaces get depth via shadow rather than borders */
+[data-theme="navy-orange"] .show-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius);
+}
+
+[data-theme="navy-orange"] .show-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
