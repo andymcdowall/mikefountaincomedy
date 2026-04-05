@@ -13,7 +13,7 @@
   --color-accent-red-hover: #FF8C00;
   --color-accent-blue: #00E5FF;
   --color-accent-glow: rgba(255, 107, 0, 0.45);
-  --font-heading: 'Monoton', sans-serif;
+  --font-heading: 'Comfortaa', sans-serif;
   --font-body: 'Inter', sans-serif;
   --border-radius: 2px;
 }
@@ -38,9 +38,15 @@
   z-index: 0;
 }
 
-/* Stronger heading glow for nightclub */
+/* Hollow neon-tube heading — transparent fill, glowing stroke */
 [data-theme="nightclub"] .hero__heading {
-  text-shadow: 0 0 30px var(--color-accent-glow), 0 0 80px rgba(255, 107, 0, 0.25);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--color-accent);
+  text-shadow:
+    0 0 6px var(--color-accent),
+    0 0 16px var(--color-accent),
+    0 0 32px rgba(255, 107, 0, 0.7),
+    0 0 72px rgba(255, 107, 0, 0.35);
 }
 
 /* Neon-outline CTA — transparent fill, glowing border */
