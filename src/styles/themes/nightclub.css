@@ -58,10 +58,14 @@
     0 0 72px rgba(255, 107, 0, 0.35);
 }
 
-/* Kill the box-shadow glow on active nav link — it renders as a rectangle */
+/* Replace box-shadow (renders as rectangle) with text-shadow glow */
 [data-theme="nightclub"] .site-header__nav-link--active,
 [data-theme="nightclub"] .site-header__nav-link:hover {
   box-shadow: none;
+  text-shadow:
+    0 0 8px var(--color-accent),
+    0 0 20px rgba(255, 107, 0, 0.6),
+    0 0 40px rgba(255, 107, 0, 0.3);
 }
 
 /* Logo — neon tube treatment matching the hero heading */
