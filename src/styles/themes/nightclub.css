@@ -4,15 +4,15 @@
   --color-bg-surface: #0E0E1A;
   --color-text-primary: #F0EEFF;
   --color-text-muted: #8888AA;
-  --color-accent: #FF2D78;
-  --color-accent-hover: #E0205F;
+  --color-accent: #FF6B00;
+  --color-accent-hover: #FF8C00;
   --color-accent-secondary: #00E5FF;
   --color-border: #1A1A3A;
   /* Map legacy token names used by existing components */
-  --color-accent-red: #FF2D78;
-  --color-accent-red-hover: #E0205F;
+  --color-accent-red: #FF6B00;
+  --color-accent-red-hover: #FF8C00;
   --color-accent-blue: #00E5FF;
-  --color-accent-glow: rgba(255, 45, 120, 0.4);
+  --color-accent-glow: rgba(255, 107, 0, 0.45);
   --font-heading: 'Bebas Neue', sans-serif;
   --font-body: 'Inter', sans-serif;
   --border-radius: 2px;
@@ -28,19 +28,19 @@
   border-bottom-color: rgba(0, 229, 255, 0.12);
 }
 
-/* Radial pink glow behind the hero heading */
+/* Radial orange glow behind the hero heading */
 [data-theme="nightclub"] .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(255, 45, 120, 0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(255, 107, 0, 0.08) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
 /* Stronger heading glow for nightclub */
 [data-theme="nightclub"] .hero__heading {
-  text-shadow: 0 0 30px var(--color-accent-glow), 0 0 80px rgba(255, 45, 120, 0.2);
+  text-shadow: 0 0 30px var(--color-accent-glow), 0 0 80px rgba(255, 107, 0, 0.25);
 }
 
 /* Neon-outline CTA — transparent fill, glowing border */
@@ -48,12 +48,12 @@
   background: transparent;
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
-  box-shadow: 0 0 12px var(--color-accent-glow), inset 0 0 12px rgba(255, 45, 120, 0.04);
+  box-shadow: 0 0 12px var(--color-accent-glow), inset 0 0 12px rgba(255, 107, 0, 0.05);
 }
 
 [data-theme="nightclub"] .hero__cta:hover,
 [data-theme="nightclub"] .hero__cta:focus-visible {
-  background: rgba(255, 45, 120, 0.07);
-  box-shadow: 0 0 28px var(--color-accent-glow), inset 0 0 16px rgba(255, 45, 120, 0.08);
+  background: rgba(255, 107, 0, 0.08);
+  box-shadow: 0 0 28px var(--color-accent-glow), inset 0 0 16px rgba(255, 107, 0, 0.1);
   outline: none;
 }
