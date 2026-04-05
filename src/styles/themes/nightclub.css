@@ -1,18 +1,19 @@
-/* Nightclub theme — placeholder values; actual values applied in ticket 01 */
+/* Nightclub theme — deep black, electric cyan + hot-pink neon */
 [data-theme="nightclub"] {
-  --color-bg: #placeholder;
-  --color-bg-surface: #placeholder;
-  --color-text-primary: #placeholder;
-  --color-text-muted: #placeholder;
-  --color-accent: #placeholder;
-  --color-accent-hover: #placeholder;
-  --color-accent-secondary: #placeholder;
-  --color-border: #placeholder;
-  --color-accent-red: #placeholder;
-  --color-accent-red-hover: #placeholder;
-  --color-accent-blue: #placeholder;
-  --color-accent-glow: transparent;
-  --font-heading: sans-serif;
-  --font-body: sans-serif;
-  --border-radius: 4px;
+  --color-bg: #080810;
+  --color-bg-surface: #0E0E1A;
+  --color-text-primary: #F0EEFF;
+  --color-text-muted: #8888AA;
+  --color-accent: #00E5FF;
+  --color-accent-hover: #00BFDE;
+  --color-accent-secondary: #FF2D78;
+  --color-border: #1A1A3A;
+  /* Map legacy token names used by existing components */
+  --color-accent-red: #00E5FF;
+  --color-accent-red-hover: #00BFDE;
+  --color-accent-blue: #FF2D78;
+  --color-accent-glow: rgba(0, 229, 255, 0.35);
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --border-radius: 2px;
 }
